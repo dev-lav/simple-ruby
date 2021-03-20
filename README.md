@@ -1,12 +1,12 @@
 # Todo List
- - [x] Setup & CRUD: https://guides.rubyonrails.org/getting_started.html
- - [x] Install new library (Permission Issue on Mac): https://www.moncefbelyamani.com/the-definitive-guide-to-installing-ruby-gems-on-a-mac/
- - [x] MySQL Database: https://cubettech.com/resources/blog/connecting-mysql-with-ruby-on-rails/
- - [x] Send Mail: https://github.com/mikel/mail 
- - [x] Send Mail Using View
- - [x] Pagination: https://github.com/kaminari/kaminari 
- - [x] Searching: https://www.rubyguides.com/2019/07/rails-where-method/ 
- - [x] Relationships: https://guides.rubyonrails.org/association_basics.html 
+- [x] Setup & CRUD: https://guides.rubyonrails.org/getting_started.html
+- [x] Install new library (Permission Issue on Mac): https://www.moncefbelyamani.com/the-definitive-guide-to-installing-ruby-gems-on-a-mac/
+- [x] MySQL Database: https://cubettech.com/resources/blog/connecting-mysql-with-ruby-on-rails/
+- [x] Send Mail: https://github.com/mikel/mail 
+- [x] Send Mail Using View
+- [x] Pagination: https://github.com/kaminari/kaminari 
+- [x] Searching: https://www.rubyguides.com/2019/07/rails-where-method/ 
+- [x] Relationships: https://guides.rubyonrails.org/association_basics.html 
 - [ ] Authentication 
 - [ ] Layout & Theme
 - [ ] Upload File
@@ -14,3 +14,5 @@
 - [ ] Lazy Load
 - [ ] Password Encryption
 - [ ] Cache
+- [x] Http Request: https://github.com/jnunemaker/httparty
+- [x] Environment Variable: https://github.com/bkeepers/dotenv

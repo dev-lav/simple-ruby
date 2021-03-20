@@ -24,6 +24,8 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'mysql2'
 gem 'kaminari'
+gem 'httparty'
+gem 'dotenv-rails'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

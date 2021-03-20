@@ -2,15 +2,28 @@ class HomeController < ApplicationController
   def index
   	@articles = Article.all
   	# Book.where("title LIKE ?", "%" + params[:q] + "%")
+  	
+  	# SEARCHING USING WHERE CONDITION 
   	@testimoni = Testimoni.order(:name).page(params[:page])
   	unless ! params[:q]
   		@testimoni = @testimoni.where("name LIKE ? OR testimoni LIKE ?", "%" + params[:q] + "%", "%" + params[:q] + "%")
   	end
-  	# Book.where(category: "Programming").or(Book.where(category: "Ruby"))
   	@testimoni =  @testimoni.per(10)
-  	#@testimoni = Testimoni.page(2).per(1)
   	
-  	# require 'net/smtp'
+	# HTTP REQUEST
+	require 'httparty'
+	# response = HTTParty.get('https://reqres.in/api/users?page=1')
+
+	# response = HTTParty.post("https://reqres.in/api/users", 
+	# 			body: {
+	# 			    "name": "morpheus",
+	# 			    "job": "leader"
+	# 			})
+	# @bo = response.body
+	# @code = response.code
+
+	# SENDING EMAIL
+  	require 'net/smtp'
   	require 'mail'
   	mail = Mail.new do
 	  from    'info@yourrubyapp.com'
@@ -19,9 +32,10 @@ class HomeController < ApplicationController
 	  body    '<h3>Lorem Ipsum</h3></br>John Doe'
 	end
 	Mail.defaults do
-	  delivery_method :smtp, address: 'smtp.mailtrap.io', port: 2525
+	  delivery_method :smtp, address: 'smtp.mailtrap.io', port: 2525, user_name: ENV['MAIL_USERNAME'],password: ENV['MAIL_PASSWORD']
 	  mail.deliver
 	end
+
 	# mail.delivery_method :sendmail
 	# puts mail.deliver
 	# message = "Lorem Ipsum"

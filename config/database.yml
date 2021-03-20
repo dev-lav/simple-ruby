@@ -13,10 +13,10 @@ development:
   # <<: *default
   # database: db/development.sqlite3
   adapter: mysql2
-  database: ruby_blog
-  host: 127.0.0.1
-  username: johndoe
-  password: bismillah
+  database: <%= ENV['DB_DATABASE'] %>
+  host: <%= ENV['DB_HOST'] %>
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
   encoding: utf8
 
 # Warning: The database defined as "test" will be erased and

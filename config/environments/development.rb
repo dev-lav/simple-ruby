@@ -39,11 +39,11 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :user_name => '6363bb6bed5a66',
-    :password => '5bfc4046555fb6',
-    :address => 'smtp.mailtrap.io',
-    :domain => 'smtp.mailtrap.io',
-    :port => '2525',
+    :user_name => ENV['MAIL_USERNAME'],
+    :password => ENV['MAIL_PASSWORD'],
+    :address => ENV['MAIL_ADDRESS'],
+    :domain => ENV['MAIL_DOMAIN'],
+    :port => ENV['MAIL_PORT'],
     :authentication => :cram_md5,
     :openssl_verify_mode  => 'none'
   }
